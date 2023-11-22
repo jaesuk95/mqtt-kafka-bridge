@@ -45,13 +45,14 @@ mqtt_client.on_message = on_message
 mqtt_client.connect(mqtt_broker, mqtt_port, keepalive=60)
 
 # kafka broker settings
-kafka_broker = "192.168.1.30:9092"      # example, you are transmitting data from MQTT Local server to Kafka-server
+# kafka_broker = "192.168.1.30:9092"      # example, you are transmitting data from MQTT Local server to Kafka-server
+kafka_broker = "localhost:9092"      # example, you are transmitting data from MQTT Local server to Kafka-server
 
 # Create a kafka client instance
 kafka_client = KafkaClient(hosts=kafka_broker)
 
 # Access a Kafka topic (Create one if it doesn't exist)
-kafka_topic_name = 'kafka_first_test'
+kafka_topic_name = 'kafka_test'
 kafka_topic = kafka_client.topics[kafka_topic_name]
 kafka_producer = kafka_topic.get_sync_producer()
 
