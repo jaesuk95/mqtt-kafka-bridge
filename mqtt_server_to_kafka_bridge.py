@@ -8,7 +8,7 @@ import time
 # then, transmit the data to Kafka-server
 
 # MQTT broker settings
-mqtt_broker = "localhost"
+mqtt_broker = "10.104.238.73"
 mqtt_port = 1883
 
 # MQTT topic to which you want to publish data
@@ -46,7 +46,7 @@ mqtt_client.connect(mqtt_broker, mqtt_port, keepalive=60)
 
 # kafka broker settings
 # kafka_broker = "192.168.1.30:9092"      # example, you are transmitting data from MQTT Local server to Kafka-server
-kafka_broker = "localhost:9092"      # example, you are transmitting data from MQTT Local server to Kafka-server
+kafka_broker = "10.103.226.125:9092"      # example, you are transmitting data from MQTT Local server to Kafka-server
 
 # Create a kafka client instance
 kafka_client = KafkaClient(hosts=kafka_broker)

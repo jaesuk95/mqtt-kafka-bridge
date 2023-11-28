@@ -1,0 +1,2 @@
+paho-mqtt==1.5.1
+pykafka==2.8.0
